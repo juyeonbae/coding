@@ -11,3 +11,4 @@ def solution(s):
 조건문 대신 문자열 슬라이스로 축약 가능 
 return s[(len(str)-1)//2 : len(str)//2 + 1] 
 """
+
