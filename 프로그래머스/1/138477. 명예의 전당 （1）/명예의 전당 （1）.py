@@ -1,13 +1,15 @@
+import heapq
+
+
 def solution(k, score):
-
-    q = []
-
     answer = []
-    for s in score:
+    min_heap = []
 
-        q.append(s)
-        if (len(q) > k):
-            q.remove(min(q))
-        answer.append(min(q))
+    for s in score:
+        heapq.heappush(min_heap, s)
+        if len(min_heap) > k:
+            heapq.heappop(min_heap)
+
+        answer.append(min_heap[0])
 
     return answer
