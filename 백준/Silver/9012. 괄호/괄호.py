@@ -1,20 +1,16 @@
-T = int(input())
-for tc in range(T):
-    s = input()
-
-    st, chk = [], True
-    for i in s:
+a = int(input())
+for i in range(a):
+    b = input()
+    sum = 0
+    for i in b:
         if i == '(':
-            st.append(i)
-        else:
-            if len(st) == 0:
-                chk = False
-                break
-            else:
-                if st[-1] == '(':
-                    st.pop()
-
-    if chk and not st:
-        print("YES")
-    else:
-        print("NO")
+            sum += 1
+        elif i == ')':
+            sum -= 1
+        if sum < 0:
+            print('NO')
+            break
+    if sum > 0:
+        print('NO')
+    elif sum == 0:
+        print('YES')
