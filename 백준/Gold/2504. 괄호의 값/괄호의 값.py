@@ -18,7 +18,7 @@ for i in s:
             tmp = 0
             while len(st) != 0:
                 top = st.pop()
-                if isinstance(top, int):  # 숫자를 만나면
+                if str(top).isdigit():  # 숫자를 만나면
                     tmp += top  # 임시 변수에 더해줌
                 elif top == '(':  # '('를 만나면
                     tmp *= 2  # 2를 곱한 후
@@ -39,7 +39,7 @@ for i in s:
             tmp = 0
             while len(st) != 0:
                 top = st.pop()
-                if isinstance(top, int):  # 숫자를 만나면
+                if str(top).isdigit():  # 숫자를 만나면
                     tmp += top  # 임시 변수에 더해줌
                 elif top == '[':  # '['를 만나면
                     tmp *= 3  # 3을 곱한 후
