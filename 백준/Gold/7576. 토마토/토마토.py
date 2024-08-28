@@ -1,13 +1,11 @@
 from collections import deque
 
 m, n = map(int, input().split())
-board = []
+board = [list(map(int, input().split())) for _ in range(n)]
 dist = [[-1] * m for _ in range(n)]
 queue = deque()
 
 for i in range(n):
-    row = list(map(int, input().split()))
-    board.append(row)
     for j in range(m):
         if board[i][j] == 1:
             queue.append((i, j))
