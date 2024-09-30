@@ -1,22 +1,13 @@
-# n: 못들은 사람, m: 못본 사람
 n, m = map(int, input().split())
 
-p = {input(): 1 for _ in range(n)}
+# 못들은 사람과 못본 사람을 각각 집합으로 생성
+heard = {input().strip() for _ in range(n)}
+seen = {input().strip() for _ in range(m)}
 
-cnt, lst = 0, []
-for i in range(m):
-    s = input()
-    if s in p:
-        cnt += 1
-        p[s] -= 1
+# 두 집합의 교집합 구하기
+result = sorted(heard & seen)
 
-print(cnt)
-
-res = []
-for k, v in p.items():
-    if v == 0:
-        res.append(k)
-
-res.sort()
-
-for i in res: print(i)
+# 결과 출력
+print(len(result))
+for name in result:
+    print(name)
