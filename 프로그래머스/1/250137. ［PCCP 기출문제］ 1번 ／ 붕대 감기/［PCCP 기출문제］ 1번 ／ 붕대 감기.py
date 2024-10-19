@@ -1,12 +1,12 @@
 def solution(bandage, health, attacks):
     answer = health
 
-    # t초 기준으로 반복
-    t = 0
-    a = 0  # 공격 시간
-    cnt = 0  # 연속 성공
+    # t초, 공격 idx, 연속성공 cnt
+    t, a, cnt = 0, 0, 0 
     fin = attacks[-1][0]  # 마지막 공격 시간
+    
     while True:
+        # 마지막 공격이 끝나면 exit
         if t == fin + 1:
             break
 
