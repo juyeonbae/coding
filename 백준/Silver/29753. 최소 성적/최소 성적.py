@@ -1,4 +1,4 @@
-from decimal import Decimal, ROUND_FLOOR
+from decimal import Decimal, ROUND_DOWN
 import sys
 
 input = sys.stdin.readline
@@ -13,7 +13,7 @@ N, X = int(N), Decimal(X)
 cnt, score = 0, 0
 for i in range(N-1):
     c, g = input().split()
-    score += Decimal(c) * grade[g]
+    score += int(c) * grade[g]
     cnt += int(c)
 
 L = int(input())
@@ -22,7 +22,7 @@ cnt += L
 answer = 'impossible'
 for k, v in grade.items():
     tmp = (score + (v * L)) / cnt
-    tmp = tmp.quantize(Decimal('0.01'), rounding=ROUND_FLOOR)
+    tmp = tmp.quantize(Decimal('0.01'), rounding=ROUND_DOWN)
     if tmp > X:
         answer = k
 
