@@ -14,9 +14,9 @@ cnt, score = 0, 0
 for i in range(N-1):
     c, g = input().split()
     score += Decimal(c) * grade[g]
-    cnt += Decimal(c)
+    cnt += int(c)
 
-L = Decimal(input())
+L = int(input())
 cnt += L
 
 answer = 'impossible'
