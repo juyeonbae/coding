@@ -7,11 +7,11 @@ grade = {'A+': Decimal('4.50'), 'A0': Decimal('4.00'), 'B+': Decimal('3.50'),
          'B0': Decimal('3.00'), 'C+': Decimal('2.50'), 'C0': Decimal('2.00'), 
          'D+': Decimal('1.50'), 'D0': Decimal('1.00'), 'F': Decimal('0.00')}
 
-N, X = map(Decimal, input().split())
+N, X = input().split()
+N, X = int(N), Decimal(X)
 
-cnt = Decimal('0')
-score = Decimal('0')
-for i in range(int(N)-1):
+cnt, score = 0, 0
+for i in range(N-1):
     c, g = input().split()
     score += Decimal(c) * grade[g]
     cnt += Decimal(c)
