@@ -5,8 +5,8 @@ n = int(input()) # 부서 수
 
 arr = []
 for _ in range(n):
-    tmp = input().strip()
-    x = sum(list(map(int, tmp[1:].split())))
+    parts = list(map(int, input().split()))
+    x = sum(parts[1:])
     arr.append(x)
 
 arr.sort()
