@@ -17,8 +17,7 @@ for _ in range(n-1):
 # 누적 거리 함께 들고 다니기 
 def dfs(node, target, dist):
     if node == target:
-        print(dist)
-        return
+        return dist
 
     for next, w in graph[node]:
         if not visited[next]:
@@ -26,11 +25,10 @@ def dfs(node, target, dist):
             result = dfs(next, target, dist + w)
             if result != -1:
                 return result
-
     return -1
 
 for _ in range(m):
     start, end = map(int, input().split())
     visited = [False] * (n+1)
     visited[start] = True
-    dfs(start, end, 0)
+    print(dfs(start, end, 0))
