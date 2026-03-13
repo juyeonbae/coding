@@ -22,27 +22,24 @@ if root == delete_node:
     print(0)
     sys.exit()
 
-# 4. 리프 개수 저장할 변수 
-leaf_count = 0
-
-# 5. DFS 함수 
+# 4. DFS 함수 
 def dfs(node):
-    global leaf_count
     childs = []
 
-    # 5-1. 살아있는 자식 개수 세기 
+    # 4-1. 살아있는 자식 개수 세기 
     for child in tree[node]:
         if child != delete_node:
             childs.append(child)
 
     # 리프 판단 
     if not childs:
-        leaf_count += 1
-        return 
+        return 1 
 
-    # 5-2. 자식들 DFS 탐색 
+    # 4-2. 자식들 DFS 탐색 
+    leaf_count = 0
     for child in childs:
-        dfs(child)
+        leaf_count += dfs(child)
 
-dfs(root)
-print(leaf_count)
+    return leaf_count
+
+print(dfs(root))
