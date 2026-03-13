@@ -24,6 +24,10 @@ def dfs(node, target, dist):
         if not visited[next]:
             visited[next] = True
             result = dfs(next, target, dist + w)
+            if result != -1:
+                return result
+
+    return -1
 
 for _ in range(m):
     start, end = map(int, input().split())
