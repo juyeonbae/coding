@@ -1,0 +1,27 @@
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+arr = list(map(int, input().split()))
+arr.sort()
+
+path = [] # 현재까지 만든 수열 
+visited = [False] * (n+1)
+
+def backtrack():
+    # 길이가 m이면 완성된 수열 
+    if len(path) == m:
+        print(*path)
+        return
+
+    # 1부터 n까지 하나씩 넣어보기 
+    for i in range(len(arr)):
+        if visited[i]:
+            continue
+        path.append(arr[i])
+        visited[i] = True
+        backtrack() # 다음 자리로 
+        path.pop() # 선택 취소
+        visited[i] = False
+
+backtrack()
