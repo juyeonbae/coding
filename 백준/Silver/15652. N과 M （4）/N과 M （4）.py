@@ -1,0 +1,20 @@
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+
+path = [] # 현재까지 만든 수열 
+
+def backtrack(num):
+    # 길이가 m이면 완성된 수열 
+    if len(path) == m:
+        print(*path)
+        return
+
+    # 1부터 n까지 하나씩 넣어보기 
+    for i in range(num, n+1):
+        path.append(i)
+        backtrack(i) # 다음 자리로 
+        path.pop() # 선택 취소
+
+backtrack(1)
