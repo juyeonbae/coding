@@ -7,7 +7,6 @@ arr.sort()
 
 password = [] 
 visited = [False] * len(arr)
-vowels = {'a', 'e', 'i', 'o', 'u'}
 
 # 추가 조건) 모음 최소 1개, 자음 최소 2개 
 
@@ -15,10 +14,12 @@ def backtrack(num):
     pass
     # 종료 조건 
     if len(password) == L:
-        password_set = set(password)
-        v_count = len(password_set & vowels)
+        v_count = 0
+        for char in password:
+            if char in "aeiou":
+                v_count += 1
+                
         c_count = len(password) - v_count
-
         if v_count >= 1 and c_count >= 2:
             print("".join(password))
         return
