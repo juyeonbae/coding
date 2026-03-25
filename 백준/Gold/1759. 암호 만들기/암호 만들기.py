@@ -1,44 +1,41 @@
 import sys
-input = sys.stdin.readline
+input = sys.stdin.readline 
 
 L, C = map(int, input().split())
 arr = list(input().split())
 arr.sort()
 
-password = [] 
-visited = [False] * len(arr)
-
-# 추가 조건) 모음 최소 1개, 자음 최소 2개 
+# 알파벳 순으로 
+# 최소 한 개의 모음, 최소 두 개의 자음 포함 
+lst = []
+visited = [False] * C
 
 def backtrack(num):
-    pass
-    # 종료 조건 
-    if len(password) == L:
-        v_count = 0
-        for char in password:
+    # 종료 조건
+    if len(lst) == L:
+        v_count = 0 
+        for char in lst:
             if char in "aeiou":
                 v_count += 1
-                
-        c_count = len(password) - v_count
+        c_count = len(lst) - v_count
         if v_count >= 1 and c_count >= 2:
-            print("".join(password))
-        return
+            print(''.join(lst))
+        return 
 
-    # for 선택지 in 가능한 후보들: 
-    for i in range(num, len(arr)):
+    # for 반복 in 선택 가능한 리스트:
+    for i in range(num, C):
         if visited[i]:
             continue
             
-        # 선택할 수 있다면 선택 
         visited[i] = True
-        password.append(arr[i])
+        lst.append(arr[i])
 
-        # backtrack()
-        backtrack(i+1)
-        
-        # 선택 취소
-        visited[i] = False 
-        password.pop()
-        
-# 정답 출력 
+        # 백트래킹
+        backtrack(i+1) 
+    
+        # 선택 취소 
+        visited[i] = False
+        lst.pop()
+
+
 backtrack(0)
