@@ -6,15 +6,15 @@ n = int(input())
 cnt = 0
 i = n//5
 
-if n % 5 == 0:
+if n == 1 or n == 3:
+    print(-1)
+else:
     cnt = n // 5
-else:  
-    while i > -1:
-        tmp = n - i * 5
-        if tmp % 2 == 0:
-            cnt = i + tmp // 2 
-            break
-        
-        i -= 1
-        
-print(-1 if cnt == 0 else cnt)
+    remainder = n % 5
+
+    if remainder % 2 != 0:
+        cnt -= 1
+        remainder += 5
+
+    cnt += remainder // 2
+    print(cnt)
