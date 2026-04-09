@@ -2,6 +2,7 @@ n = int(input())
 MOD = 1000000007
 
 dp = [0] * (n+1)
+if n == 0: print(0)
 if n == 1 or n == 2: print(1)
 if n > 3:
     dp[1] = dp[2] = 1
