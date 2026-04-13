@@ -20,8 +20,13 @@ Baekjun &amp; Programmers
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0020-valid-parentheses/) | Easy |
+| [0125-valid-palindrome](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0125-valid-palindrome/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0020-valid-parentheses/) | Easy |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0125-valid-palindrome](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0125-valid-palindrome/) | Easy |
 <!---LeetCode Topics End-->
