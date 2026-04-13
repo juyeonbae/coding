@@ -8,6 +8,7 @@ Baekjun &amp; Programmers
 | ------- | ------- |
 | [0001-two-sum](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0001-two-sum/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0121-best-time-to-buy-and-sell-stock/) | Easy |
+| [1470-shuffle-the-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/1470-shuffle-the-array/) | Easy |
 | [1929-concatenation-of-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/1929-concatenation-of-array/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
