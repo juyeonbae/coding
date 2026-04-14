@@ -1,8 +1,13 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        x = str(x)
-        for i in range(len(x)//2):
-            if x[i] != x[-i-1]:
-                return False
+        if x < 0: return False
 
-        return True
+        reversed_num = 0
+        tmp = x
+
+        while tmp != 0:
+            digit = tmp % 10 
+            reversed_num = reversed_num * 10 + digit
+            tmp //= 10 
+        
+        return reversed_num == x 
