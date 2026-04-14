@@ -36,4 +36,8 @@ Baekjun &amp; Programmers
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1929-concatenation-of-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/1929-concatenation-of-array/) | Easy |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0009-palindrome-number](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0009-palindrome-number/) | Easy |
 <!---LeetCode Topics End-->
