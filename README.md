@@ -9,6 +9,7 @@ Baekjun &amp; Programmers
 | [0001-two-sum](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0001-two-sum/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0485-max-consecutive-ones](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0485-max-consecutive-ones/) | Easy |
+| [0977-squares-of-a-sorted-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0977-squares-of-a-sorted-array/) | Easy |
 | [1470-shuffle-the-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/1470-shuffle-the-array/) | Easy |
 | [1929-concatenation-of-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/1929-concatenation-of-array/) | Easy |
 ## Dynamic Programming
@@ -32,6 +33,7 @@ Baekjun &amp; Programmers
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0125-valid-palindrome/) | Easy |
+| [0977-squares-of-a-sorted-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0977-squares-of-a-sorted-array/) | Easy |
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -40,4 +42,8 @@ Baekjun &amp; Programmers
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0009-palindrome-number](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0009-palindrome-number/) | Easy |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0977-squares-of-a-sorted-array](https://github.com/juyeonbae/coding/tree/main/Python3/Easy/0977-squares-of-a-sorted-array/) | Easy |
 <!---LeetCode Topics End-->
