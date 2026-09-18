@@ -1,13 +1,13 @@
 def solution(clothes):
-    dct = {}
-    for i in range(len(clothes)):
-        if clothes[i][1] in dct:
-            dct[clothes[i][1]] += 1
+    d = {}
+    for n, k in clothes:
+        if k in d:
+            d[k].append(n)
         else:
-            dct[clothes[i][1]] = 1
-
-    answer = 1
-    for i in dct.keys():
-        answer *= (dct[i] + 1)
-
-    return answer - 1
+            d[k] = [n]
+    
+    s = 1
+    for k, v in d.items():
+        s *= len(v) + 1
+        
+    return s-1
